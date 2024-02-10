@@ -1,0 +1,121 @@
+:root{
+ --primary:rgb(222, 250, 255);
+ --secondary:rgb(7, 7, 44);
+ --normal:blue;
+}
+.live{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1em;
+}
+.liveRed{
+  background: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: anim 0.9s alternate infinite;
+}
+@keyframes anim {
+  to{
+    transform: scale(0.5);
+  }
+  form{
+    transform: scale(0.7);
+  }
+
+}
+.heading{
+  text-align: center;
+}
+/* Show data section */
+
+.Data-Container{
+  /* border: 1px solid red; */
+  height: 60vh;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.country{
+width: 350px;
+height: 200px;
+border: 1px solid green;
+background: linear-gradient(45deg,rgb(4, 205, 114),gray,rgb(6, 122, 168));
+border-radius:10px;
+}
+.recovered{
+  width: 350px;
+height: 200px ;
+border: 1px solid green;
+background: linear-gradient(45deg,rgb(4, 185, 205),gray,rgb(93, 22, 247));
+border-radius:10px;
+}
+.confirmed{
+  width: 350px;
+height: 200px ;
+border: 1px solid green;
+background: linear-gradient(45deg,rgb(245, 154, 50),gray,rgb(3, 145, 201));
+border-radius:10px;
+}
+.death{
+  width: 350px;
+height: 200px ;
+border: 1px solid green;
+background: linear-gradient(45deg,rgb(168, 44, 245),gray,rgb(251, 49, 83));
+border-radius:10px;
+}
+.active{
+  width: 350px;
+height: 200px ;
+border: 1px solid green;
+background: linear-gradient(45deg,rgb(93, 121, 225),gray,rgb(232, 132, 32));
+border-radius:10px;
+}
+.updated{
+  width: 350px;
+height: 200px;
+border: 1px solid green;
+background: linear-gradient(45deg,rgb(205, 4, 195),gray,rgb(178, 186, 12));
+border-radius:10px;
+
+}
+
+.dataHeading{
+  text-transform: uppercase;
+  text-align: center;
+}
+.small{
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+.CovData{
+  text-align: center;
+  font-size: 40px;
+  flex-wrap: wrap;
+  font-weight: bolder;
+  text-shadow: 5px 8px 5px black;
+  color: var(--primary);
+}
+
+@media screen and (max-width:800px) {
+  .Data-Container{
+    /* border: 1px solid red; */
+    height: auto;
+    width: 90vw;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .country,.active,.confirmed,.death,.recovered,.updated {
+    width: 100%;
+    margin: 12px 0;
+  }
+}
